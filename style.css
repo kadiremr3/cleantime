@@ -63,11 +63,13 @@ img { max-width: 100%; display: block; }
   background: #fff; color: #03081C; font-weight: 600; text-decoration: none;
 }
 .hero .phones { display: flex; justify-content: center; gap: 20px; margin-top: 56px; }
-/* The phones are cut off by the bottom of the band, like they're rising out of it. */
-.hero .phones { height: 420px; align-items: flex-start; }
-.hero .phones img { width: 260px; filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45)); }
-.hero .phones img:nth-child(2) { transform: translateY(-24px); }
-@media (max-width: 640px) { .hero .phones img:nth-child(n+2) { display: none; } }
+.hero .phones { align-items: center; padding-bottom: 72px; }
+.hero .phones img { width: 230px; filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.45)); }
+.hero .phones img:nth-child(2) { width: 250px; }
+@media (max-width: 760px) {
+  .hero .phones { gap: 10px; }
+  .hero .phones img, .hero .phones img:nth-child(2) { width: 31%; }
+}
 
 /* Home: sections */
 section { max-width: 1080px; margin: 0 auto; padding: 72px 16px 0; }
